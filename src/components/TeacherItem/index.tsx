@@ -10,7 +10,7 @@ function TeacherItem() {
       <header>
         <img
           src="https://avatars3.githubusercontent.com/u/47723483?s=460&u=d055af820f7b2523ad3b8a3bdefd6ec909772c35&v=4"
-          alt=""
+          alt="Ingrid Fernandes"
         />
         <div>
           <strong>Ingrid Fernandes</strong>
