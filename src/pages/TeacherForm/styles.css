@@ -39,7 +39,32 @@
   border-bottom: 1px solid var(--color-line-in-white);
 }
 
-#page-teacher-form main fieldset  .input-block + .textarea-block {
+#page-teacher-form main fieldset legend button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: var(--color-primary);
+  font: 700 1.6rem Archivo;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#page-teacher-form main fieldset legend button:hover {
+  color: var(--color-primary-lighter)
+} 
+
+#page-teacher-form main .schedule-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap:  1.6rem;
+}
+
+#page-teacher-form main .schedule-item .input-block {
+  margin-top: 0!important;
+}
+
+#page-teacher-form main fieldset  .input-block + .textarea-block,
+#page-teacher-form main fieldset  .select-block + .input-block {
   margin-top: 2.4rem;
 }
 
@@ -66,7 +91,6 @@
 #page-teacher-form main footer button {
   width: 100%;
   height: 5.6rem;
-  background: var(--color-secondary);
   color: var(--color-button-text);
   border: 0;
   border-radius: 0.8rem;
@@ -78,6 +102,11 @@
   text-decoration: none;
   margin-top: 3.2rem;
   transition: background-color 0.2s;
+  background: var(--color-secondary);
+}
+
+#page-teacher-form main fieldset legend button .button-primary {
+  background: var(--color-primary);
 }
 
 #page-teacher-form main footer button:hover {
@@ -116,6 +145,30 @@
     width: 20rem;
     margin-top: 0;
   }
-
 }
 
+/* Loader */
+.lds-dual-ring {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 2px 0 2px 5px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
