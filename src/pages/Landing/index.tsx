@@ -20,6 +20,7 @@ function Landing() {
       setTotalConnections(total)
     }).catch (err => console.log(err));
   }, []);
+  
   return (
     <div id="page-landing">
       <div id="page-landing-content" className="container">
